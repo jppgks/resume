@@ -22,10 +22,10 @@
     % The font could be set to Windows-specific Calibri by using the 'calibri' option
     \documentclass[]{mcdowellcv}
 
-	\usepackage{fontspec}
-	\setmainfont[Renderer=Basic, Numbers=OldStyle, Scale = 1.0]{Free Serif}
-	\setsansfont[Renderer=Basic, Scale=0.90]{TeX Gyre Heros}
-	\setmonofont[Renderer=Basic]{TeX Gyre Cursor}
+%	\usepackage{fontspec}
+%	\setmainfont[Renderer=Basic, Numbers=OldStyle, Scale = 1.0]{Free Serif}
+%	\setsansfont[Renderer=Basic, Scale=0.90]{TeX Gyre Heros}
+%	\setmonofont[Renderer=Basic]{TeX Gyre Cursor}
     % For mathematical symbols    
     \usepackage{amsmath}
 
@@ -40,25 +40,41 @@
 % Print the header
 \makeheader
       
-\begin{cvsection}{Skills}
+\begin{cvsection}{Skills \& Interests}
 	\begin{cvsubsection}{}{}{}
 		\begin{itemize}
-			\item Programming Languages:  Python, Matlab, Java, bash
-			\item Programming Frameworks:  TensorFlow, React, Django, Ionic
-			\item Research Interest: Machine Learning (Artificial Neural Networks)
+			\item Programming Languages:  Python, Matlab, Java, bash. Programming Frameworks:  TensorFlow, React, Django, Ionic
+			\item Research Interest: Artificial Intelligence for Social Good
 		\end{itemize}
 	\end{cvsubsection}
 \end{cvsection}
+% Achievements
+\begin{cvsection}{Achievements}
+\begin{cvsubsection}{}{}{}
+\begin{itemize}
+	\item Belgian Champion Athletics -- 1500m U20 -- September 1, 2013
+	\item Bachelor thesis -- 16/20 (Top 10\%, class of 2018) -- June 2018
+	\\Generation of state-of-the-art images from a textual description using generative adversarial networks.
+\end{itemize}
+\end{cvsubsection}
+\end{cvsection}
 \begin{cvsection}{Work Experience}
-	\begin{cvsubsection}{Research Intern}{KU Leuven}{Aug 2018 -- Sep 2018}
-		Leuven, Belgium
+	\begin{cvsubsection}{Machine Learning Consultant}{Daydream}{Jan 2019 -- present}
+		\begin{itemize}%
+			\item Provide value using state-of-the-art machine learning and software development practices.
+		\end{itemize}
+	\end{cvsubsection}
+	\begin{cvsubsection}{Teaching Assistant}{KU Leuven University}{Sep 2018 -- Dec 2018}
+		\begin{itemize}%
+			\item Accommodated exercise sessions for the course on Principles of Computer Programming (G0N28A).
+		\end{itemize}
+	\end{cvsubsection}
+	\begin{cvsubsection}{Research Intern}{KU Leuven University}{Aug 2018 -- Sep 2018}
 		\begin{itemize}%
 			\item Developed a system that automatically extracts keywords from a textual query (in one of 3 languages) by employing a state-of-the-art universal dependency parser (DRAGNN). These keywords are then used for retrieving relevant video content sourced from citizen journalists.
-			\item Combined textual and video signal, we make a multi-modal embedding to enable searching in continuous space for consistent videos, relevant to the search query.
 		\end{itemize}
 	\end{cvsubsection}
 	\begin{cvsubsection}{Software Development Intern}{T-Mining}{Feb 2017 -- Aug 2017}
-		Antwerp, Belgium
 		\begin{itemize}%
 			\item Set up development operations: automated building and testing of 2 Node.js powered apps and 1 blockchain app on CircleCI from BitBucket repositories.
 			\item Implemented new geolocation features, using the Ionic mobile app framework. 
@@ -66,28 +82,28 @@
 		\end{itemize}
 	\end{cvsubsection}
 	\begin{cvsubsection}{Software Development Intern}{VikingCo}{Jul 2016 -- Sep 2016}
-		Hasselt, Belgium
 		\begin{itemize}%
 			\item Reduced duration of running test suites of the Mobile Vikings web platform by 40\%, so developers lose less time and are encouraged to run tests often.
 			\item Added features to \textquotedbl{}Django admin\textquotedbl{}-powered MVP for business support system of new premium app service, which sped up the development of this product.
 			\item Implemented feature for existing Mobile Vikings product that enabled the company to generate detailed data about a subset of users and act on that new information.
 		\end{itemize}
 	\end{cvsubsection}
-	\begin{cvsubsection}{Board Member}{EMERGENT Leuven}{Feb 2017 -- Present}
-		Leuven, Belgium
+	\begin{cvsubsection}{Board Member}{EMERGENT Leuven}{Feb 2017 -- Dec 2018}
 		\begin{itemize}
-			\item Interdisciplinary student organisation in Leuven, raising awareness about today’s complex issues.
-			\item I co-led the organisation of the Data 4 Good challenge 2017, so over 100 students could work in teams to analyse data and present insights on the global refugee crisis.
-			\item I co-organise lectures and workshops on topics like big data, AI, medical engineering.
+			\item As board member and responsible for partner relations, I learned the subtleties of collaborating with clients and developing mutually beneficial partnerships. 
+			\item Received thousands of euros in funding for organizing events and teaching students about data science.
+			\item Responsible for the organization of our Data 4 Good Challenge. This event gathers 125 students that work together in complementary teams on a data analytics case. This year’s deliverables included data insights, visualization and a roadmap to tackle food insecurity.
 		\end{itemize}
 	\end{cvsubsection}
 \end{cvsection}
+
 \begin{cvsection}{Education}
 	\begin{cvsubsection}{Leuven, Belgium}{KU Leuven University}{}
 		\begin{itemize}
-			\item (Sep 2018 -- Jun 2020) MS in Mathematical Engineering, minor Machine Learning.
+			\item (Sep 2018 -- Jan 2019) Courses of MS in Mathematical Engineering, minor Machine Learning.
 			\item (Sep 2014 -- Sep 2018) BS in Computer Science, minor Business \& Innovation
 			\\ Thesis (top 10\%, class of 2018): \emph{Text-to-image translation using generative adversarial networks} under supervision of professor Marie-Francine Moens.
+			\item (Sep 2012 -- Jun 2014) Studied and trained at the Belgian high school for athletics, where I consistently finished among the top 5 national runners in competition and won the national championships in my main event, the 1500m.
 		\end{itemize}
 	\end{cvsubsection}
 \end{cvsection}
