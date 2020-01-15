@@ -65,12 +65,12 @@
 \setlist{leftmargin=*, noitemsep, topsep=-1\parskip}
 
 % For spcaed small caps
-\usepackage{microtype}
+%\usepackage{microtype}
 
-\DeclareMicrotypeSet*{smallcapsi} { 
-	encoding = {OT1,T1,T2A,LY1,OT4,QX,T5,TS1,EU1,EU2},
-	shape    = {sc*,si,scit}
-}
+% \DeclareMicrotypeSet*{smallcapsi} { 
+% 	encoding = {OT1,T1,T2A,LY1,OT4,QX,T5,TS1,EU1,EU2},
+% 	shape    = {sc*,si,scit}
+%}
 
 %--------------------------------------------------------------------------------
 %                                    Constants                                  -
@@ -110,7 +110,7 @@
 \name{}
 
 \newcommand\printname{
-	\textbf{\LARGE\textls[110]{\textsc{\@name}}}
+	\textbf{\LARGE{\textsc{\@name}}}
 }
 
 \makeatother
