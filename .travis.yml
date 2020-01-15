@@ -2,10 +2,10 @@ sudo: required
 dist: trusty
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
-  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended lmodern texlive-science texlive-math-extra pgf rubber
+  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended lmodern texlive-science texlive-math-extra texlive-xetex pgf rubber
 script:
 - mkdir _build
-- rubber --into _build --pdf resume
+- rubber --into _build --module xelatex --pdf resume
 deploy:
   provider: releases
   api_key:
