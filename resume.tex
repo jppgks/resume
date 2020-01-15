@@ -28,6 +28,18 @@
 %	\setmonofont[Renderer=Basic]{TeX Gyre Cursor}
     % For mathematical symbols    
     \usepackage{amsmath}
+    
+    \usepackage{datenumber}
+
+\newcounter{dateone}
+\newcounter{datetwo}
+
+\newcommand{\difftoday}[3]{%
+      \setmydatenumber{dateone}{\the\year}{\the\month}{\the\day}%
+      \setmydatenumber{datetwo}{#1}{#2}{#3}%
+      \addtocounter{datetwo}{-\thedateone}%
+      \the\numexpr-\thedatetwo/365\relax\space years
+} 
 
     
       % Set applicant's personal data for header
@@ -43,6 +55,7 @@
 \begin{cvsection}{Skills \& Interests}
 	\begin{cvsubsection}{}{}{}
 		\begin{itemize}
+		    \item \difftoday{2017}{01}{01}of experience with deep learning.
 			\item Programming Languages:  Python, Matlab, Java, bash. Programming Frameworks:  TensorFlow, React, Django, Ionic
 			\item Research Interest: Artificial Intelligence for Social Good
 		\end{itemize}
