@@ -21,15 +21,8 @@
 %% SOFTWARE.
     % The font could be set to Windows-specific Calibri by using the 'calibri' option
     \documentclass[]{mcdowellcv}
-
-%	\usepackage{fontspec}
-%	\setmainfont[Renderer=Basic, Numbers=OldStyle, Scale = 1.0]{Free Serif}
-%	\setsansfont[Renderer=Basic, Scale=0.90]{TeX Gyre Heros}
-%	\setmonofont[Renderer=Basic]{TeX Gyre Cursor}
-    % For mathematical symbols    
-    \usepackage{amsmath}
     
-    \usepackage{datenumber}
+\usepackage{datenumber}
 
 \newcounter{dateone}
 \newcounter{datetwo}
@@ -40,11 +33,25 @@
       \addtocounter{datetwo}{-\thedateone}%
       \the\numexpr-\thedatetwo/365\relax\space years
 } 
+    
+    \newcommand*{\myrulefill}[3][]{%
+	  \makebox[#2]{#1%
+	    \leaders\hrule height \dimexpr.5ex+.2pt\relax depth \dimexpr -.5ex+.2pt\relax \hfill% Left rule
+	    \enskip{#3}\enskip% Text (and surrounding spaces)
+	    \leaders\hrule height \dimexpr.5ex+.2pt\relax depth \dimexpr -.5ex+.2pt\relax \hfill\kern0pt}% Right rule
+	}
+
+%	\usepackage{fontspec}
+%	\setmainfont[Renderer=Basic, Numbers=OldStyle, Scale = 1.0]{Free Serif}
+%	\setsansfont[Renderer=Basic, Scale=0.90]{TeX Gyre Heros}
+%	\setmonofont[Renderer=Basic]{TeX Gyre Cursor}
+    % For mathematical symbols    
+    \usepackage{amsmath}
 
     
       % Set applicant's personal data for header
-      \name{Joppe Geluykens}
-      \address{Leuven, Belgium \linebreak +32 498 23 74 69}
+      \name{Joppe Geluykens \linebreak \small ML researcher w/ eye for business efficiency}
+      \address{Zurich, Switzerland \linebreak +41 762 71 63 71}
       \contacts{joppe@rvrie.com \linebreak rvrie.com}
     
 
@@ -56,8 +63,8 @@
 	\begin{cvsubsection}{}{}{}
 		\begin{itemize}
 		    \item \difftoday{2017}{01}{01}of experience with deep learning.
-			\item Programming Languages:  Python, Matlab, Java, bash. Programming Frameworks:  TensorFlow, React, Django, Ionic
-			\item Research Interest: Artificial Intelligence for Social Good
+			\item Programming Languages:  Python, Matlab, Java, bash, C++, Fortran. Programming Frameworks:  TensorFlow, Pytorch, React, Django, Ionic. Software Tools: KNIME, Tableau.
+			\item Professional Interest: Applying AI for generating social and business value.
 		\end{itemize}
 	\end{cvsubsection}
 \end{cvsection}
@@ -72,17 +79,40 @@
 \end{cvsubsection}
 \end{cvsection}
 \begin{cvsection}{Work Experience}
-	\begin{cvsubsection}{Machine Learning Consultant}{Daydream}{Jan 2019 -- present}
-		\begin{itemize}%
-			\item Provide value using state-of-the-art machine learning and software development practices.
+	\begin{cvsubsection}{Research Intern (Machine Learning)}{IBM Research, Z\"urich}{Jul 2019 -- Mar 2020}
+		\begin{itemize}
+			\item Developed AI models to predict chemical actions for a reactor robot to perform in order to synthesize a given organic molecule. At scale, this enables chemists across the world to order a given molecule online, without providing any details about the process to synthesize it.
 		\end{itemize}
 	\end{cvsubsection}
-	\begin{cvsubsection}{Teaching Assistant}{KU Leuven University}{Sep 2018 -- Dec 2018}
+	\begin{cvsubsection}{Associate Scientist Intern}{Procter \& Gamble}{May 2019 -- Jul 2019}
+		\begin{itemize}
+			\item Applied natural language processing techniques to automatically detect and visualize topics of consumer complaints, enabling new topic discovery and trend detection.
+			\item Used regular expressions to recover 13\% of noisy data which enabled linking consumer feedback to production information for the first time.
+		\end{itemize}
+	\end{cvsubsection}
+	\begin{cvsubsection}{Independent consultant}{Daydream}{May 2019 -- Jul 2019}
+		\begin{itemize}
+			\item Deployed machine learning model as REST API to AWS Elastic Beanstalk, enabling research output to be taken into production.
+		\end{itemize}
+	\end{cvsubsection}
+	\centering\textbf{KU Leuven University}
+	\begin{cvsubsection}{Research Intern (Machine Learning)}{}{Feb 2019 -- May 2019}
+		\begin{itemize}%
+			\item Performed research into state-of-the-art natural language processing, more specifically into better document representations for automatically classifying clinical reports (ICD-coding). 
+			\item Wrote an ETL pipeline for the MIMIC II \& III dataset using TensorFlow to serve as input to NLP models.
+			\item Developed Python software to compare different NLP representations of patient discharge summaries, as well as models for predicting ICD-9 codes from those discharge summaries.
+			\item Worked with university hospital UZ Leuven to prepare training of AI models on anonymized patient data using Google Cloud Platform.
+			\item Successfully employed the latest developments in artificial intelligence, both in software (BERT, TensorFlow) and in hardware (TPU).
+		\end{itemize}
+	\end{cvsubsection}
+	\begin{center}
+	\end{center}
+	\begin{cvsubsection}{Teaching Assistant}{}{Sep 2018 -- Dec 2018}
 		\begin{itemize}%
 			\item Accommodated exercise sessions for the course on Principles of Computer Programming (G0N28A).
 		\end{itemize}
 	\end{cvsubsection}
-	\begin{cvsubsection}{Research Intern}{KU Leuven University}{Aug 2018 -- Sep 2018}
+	\begin{cvsubsection}{Research Intern}{}{Aug 2018 -- Sep 2018}
 		\begin{itemize}%
 			\item Developed a system that automatically extracts keywords from a textual query (in one of 3 languages) by employing a state-of-the-art universal dependency parser (DRAGNN). These keywords are then used for retrieving relevant video content sourced from citizen journalists.
 		\end{itemize}
@@ -101,11 +131,14 @@
 			\item Implemented feature for existing Mobile Vikings product that enabled the company to generate detailed data about a subset of users and act on that new information.
 		\end{itemize}
 	\end{cvsubsection}
+\end{cvsection}
+\begin{cvsection}{Extracurricular}
 	\begin{cvsubsection}{Board Member}{EMERGENT Leuven}{Feb 2017 -- Dec 2018}
 		\begin{itemize}
 			\item As board member and responsible for partner relations, I learned the subtleties of collaborating with clients and developing mutually beneficial partnerships. 
 			\item Received thousands of euros in funding for organizing events and teaching students about data science.
 			\item Responsible for the organization of our Data 4 Good Challenge. This event gathers 125 students that work together in complementary teams on a data analytics case. This year’s deliverables included data insights, visualization and a roadmap to tackle food insecurity.
+			\item Responsible for organizing workshops on topics like: machine learning using KNIME, data visualization with Tableau, `how to crack the case', and more.
 		\end{itemize}
 	\end{cvsubsection}
 \end{cvsection}
@@ -113,9 +146,13 @@
 \begin{cvsection}{Education}
 	\begin{cvsubsection}{Leuven, Belgium}{KU Leuven University}{}
 		\begin{itemize}
-			\item (Sep 2018 -- Jan 2019) Courses of MS in Mathematical Engineering, minor Machine Learning.
+			\item (Sep 2019 -- Jun 2020) MS in Information Management
 			\item (Sep 2014 -- Sep 2018) BS in Computer Science, minor Business \& Innovation
 			\\ Thesis (top 10\%, class of 2018): \emph{Text-to-image translation using generative adversarial networks} under supervision of professor Marie-Francine Moens.
+		\end{itemize}
+	\end{cvsubsection}
+	\begin{cvsubsection}{Hasselt, Belgium}{Elite Sports High School}{}
+		\begin{itemize}
 			\item (Sep 2012 -- Jun 2014) Studied and trained at the Belgian high school for athletics, where I consistently finished among the top 5 national runners in competition and won the national championships in my main event, the 1500m.
 		\end{itemize}
 	\end{cvsubsection}
