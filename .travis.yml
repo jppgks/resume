@@ -2,12 +2,13 @@ sudo: required
 dist: trusty
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
-  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended lmodern texlive-science texlive-math-extra texlive-xetex pgf
+  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended lmodern
+  texlive-science texlive-math-extra texlive-xetex pgf
 script:
 - xelatex resume
 deploy:
   provider: releases
   api_key:
-    secure: 6EiXxpqAOH7RziwJas20Y58DsPDAbmbrh565gLvYnRFbN2rlFG+fQrdoo4qSsBny8vceUdV5Sr5vIFo8PxR7xn2PExm4GfpH/6CgpDXDhQ5M7ST4efaEyBMKgX9pPyA37Q9tlgRcmW0y1zfN2ZAUWnmSJsUntTpJviXrzD+VA0vz7DYDIVrjKvBYO7hX4ELg8eWc/DdEqLrwEATggPEKk3Gm/FXya5kW+rMxwA2A49iKwc+Bpjyj7HCkhwjNCdtNhKRIi0J30ONeMVhcoJxG000nJQgNbN4b0dTEZB0CJASL9qPjDbGteG7U2L2ViJLOFJuRxF4Bx63HgYNZ1LM91CRH7im15wIrqGHbfQFsRYU/7fUWqjV9LCyL+dLGqJAmh+vwLM+k42a60UeIkpJNDHnVdUCHlWQSRu4jFDSbFP0UA7r2hWXk1A2P8YCreDwcCkZ+VRkxZGLoZJYD54rmpls0fcZU/RIyuUqALq3+fT+efOCUBU9Rz7Tt7+av47Txkz8/XAC3H1py495jZuyLrLgiWjzHDN+ixuaSKjYVz/dHD83sHMahiVFR+T7gUE9SqWyV3Z20uissVQrbF/thhjMB4pdOHW+pjOjW3mBcfyBq0D3M6mbDBkf5/mUuJYM54UGpeAbKrFVL4ik0D9sspBBNpUg16eBXvDnvwd8xKdU=  # encrypted
-  file: resume.pdf
+    secure: cRquNUBq+i3VG73GFVmpELWBWn+jKjlT8Dx7dn+kQie4Mx2r2e5SZ93uX5/xVArrnqhKidD3N6pWPYpALYaSF5h1vtF/t7m7X9PzU+NiCVGYw+NRksczTgCJkMggf0EVLlue+MTWSWT3CO58pueWCVXGSepXv59vWNCtegW0sCeZnNNSAjxSbV83FiAL/n3hEQFUHBXqL8Mfmm+Cs6x8Zqz3PLXYH2Gjnupeouuz5KSq9pp/htXfiDVvvsZmotBLbfNfydsrzSQn7FRnMKuDzWSVI6JFH7Hh8Ls2RLj8RT+6n/bJZrcp7jI3eAKysKtMwHJTiZcFi+DnNkek0tI/5AmtIs6fRy9PH8tYr1HR3lEB4HpVCBGCh0k4E5cyOiwQiP50VxFjjYmPL98fQcs0AoC4GQLIdAC6kbKxsrJOFSSCa6O7j7sFspdiJB6a5YjG43Oq+MCq8w2Pk/t8fvVlKXCuBUWZK3HInFimLwvCwLMqk92/Z6a4e94bjnluR50yBK//fW+p/0xGr7m2Abo9IR9qwq8V5FyqnX3rR2BIokMv/NsEcvFWSVqHcnUMSQuTBCrO04W7cdYSt/+Rys78M6lu+8bbvbS7G4vVpCcK/8MXgtrdk1B0KUlYQohNdlQXCtM0ssxgFkYLKTbsqgbpEqTBW1JoIqgbvraSwJdhPWs=
   skip_cleanup: true
+  file: resume.pdf
